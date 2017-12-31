@@ -12,6 +12,12 @@ module.exports = {
 
   config(env, baseConfig) {
     this._directoryNames = readHydeDirectoryNames(baseConfig);
+
+    return {
+      hyde: {
+        namespace: ''
+      }
+    }
   },
 
   treeForPublic(tree) {
