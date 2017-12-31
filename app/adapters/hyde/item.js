@@ -1,3 +1,3 @@
-import HydeAdapter from 'ember-cli-hyde/adapters/hyde';
+import HydeAdapter from '../hyde';
 
 export default HydeAdapter.extend();
