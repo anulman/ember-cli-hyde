@@ -17,11 +17,13 @@ const MarkdownSection = Component.extend({
   layout,
 
   item: null,
+  urlPrefix: '/hyde',
+
   markdown: computed('item.id', function() {
     let ObjectPromiseProxy = ObjectProxy.extend(PromiseProxyMixin);
 
 		return ObjectPromiseProxy.create({
-      promise: fetch(`/hyde/${this.get('item.id')}.md`)
+      promise: fetch(`${this.get('urlPrefix')}/${this.get('item.id')}.md`)
         .then((response) => response.blob())
         .then((blob) => new Promise((resolve, reject) => {
           let reader = new FileReader();
