@@ -1212,7 +1212,7 @@ broccoli-sri-hash@^2.1.0:
     sri-toolbox "^0.2.0"
     symlink-or-copy "^1.0.1"
 
-broccoli-stew@^1.2.0, broccoli-stew@^1.3.3, broccoli-stew@^1.4.2:
+broccoli-stew@^1.2.0, broccoli-stew@^1.3.3, broccoli-stew@^1.4.2, broccoli-stew@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/broccoli-stew/-/broccoli-stew-1.5.0.tgz#d7af8c18511dce510e49d308a62e5977f461883c"
   dependencies:
@@ -1993,7 +1993,7 @@ ember-cli-shims@^1.1.0:
     ember-rfc176-data "^0.3.1"
     silent-error "^1.0.1"
 
-ember-cli-showdown@^4.1.1:
+ember-cli-showdown@~4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/ember-cli-showdown/-/ember-cli-showdown-4.1.1.tgz#7cde265d22bb7460f22d3b605428c4f75f05aafa"
   dependencies:
@@ -2159,7 +2159,7 @@ ember-factory-for-polyfill@^1.3.1:
   dependencies:
     ember-cli-version-checker "^2.1.0"
 
-ember-fetch@^3.4.4:
+ember-fetch@~3.4.4:
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/ember-fetch/-/ember-fetch-3.4.4.tgz#926ffa1c4120324b298c44e9558b458e586eb504"
   dependencies:
@@ -2176,6 +2176,16 @@ ember-getowner-polyfill@^2.0.1:
   dependencies:
     ember-cli-version-checker "^2.1.0"
     ember-factory-for-polyfill "^1.3.1"
+
+"ember-highlightjs-shim@github:anulman/ember-highlightjs-shim":
+  version "0.0.4"
+  resolved "https://codeload.github.com/anulman/ember-highlightjs-shim/tar.gz/1afc901ee10825234ae4f93dda7800782ed7053f"
+  dependencies:
+    broccoli-funnel "^2.0.1"
+    broccoli-merge-trees "^2.0.0"
+    broccoli-stew "^1.5.0"
+    ember-cli-babel "^6.6.0"
+    highlightjs "^9.10.0"
 
 ember-load-initializers@^1.0.0:
   version "1.0.0"
@@ -3083,6 +3093,10 @@ heimdalljs@^0.2.0, heimdalljs@^0.2.1, heimdalljs@^0.2.3:
   resolved "https://registry.yarnpkg.com/heimdalljs/-/heimdalljs-0.2.5.tgz#6aa54308eee793b642cff9cf94781445f37730ac"
   dependencies:
     rsvp "~3.2.1"
+
+highlightjs@^9.10.0:
+  version "9.10.0"
+  resolved "https://registry.yarnpkg.com/highlightjs/-/highlightjs-9.10.0.tgz#fca9b78ddaa3b1abca89d6c3ee105ad270a80190"
 
 hoek@2.x.x:
   version "2.16.3"

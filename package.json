@@ -22,7 +22,8 @@
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.3",
     "ember-cli-showdown": "~4.1.1",
-    "ember-fetch": "~3.4.4"
+    "ember-fetch": "~3.4.4",
+    "ember-highlightjs-shim": "github:anulman/ember-highlightjs-shim"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
