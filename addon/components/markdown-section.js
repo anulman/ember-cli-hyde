@@ -22,7 +22,7 @@ const MarkdownSection = Component.extend({
   markdown: computed('item.id', function() {
     let ObjectPromiseProxy = ObjectProxy.extend(PromiseProxyMixin);
 
-		return ObjectPromiseProxy.create({
+    return ObjectPromiseProxy.create({
       promise: fetch(`${this.get('urlPrefix')}/${this.get('item.id')}.md`)
         .then((response) => response.blob())
         .then((blob) => new Promise((resolve, reject) => {
