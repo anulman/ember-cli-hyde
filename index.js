@@ -7,10 +7,13 @@ const Funnel = require('broccoli-funnel');
 const BroccoliHydeCompiler = require('broccoli-hyde-compiler').default;
 
 const hydeConfig = require('./lib/config');
+const urlsForPrember = require('./lib/prember');
+
 module.exports = {
   name: 'ember-cli-hyde',
 
   hydeConfig,
+  urlsForPrember,
 
   treeForPublic(tree) {
     this.hydeTrees = this.hydeConfig().directories.map((name) => {
