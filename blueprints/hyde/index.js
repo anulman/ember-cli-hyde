@@ -9,5 +9,11 @@ module.exports = class HydeBlueprint extends Blueprint {
 
   normalizeEntityName(entityName) {
     return entityName;
+  },
+
+  afterInstall() {
+    return this.addPackagesToProject([
+      { name: 'ember-fetch' } // fastboot needs this in the consuming project
+    ]);
   }
 }
