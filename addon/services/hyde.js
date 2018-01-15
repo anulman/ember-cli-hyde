@@ -1,11 +1,12 @@
 import Service from '@ember/service';
 import { computed } from '@ember/object';
 import { getOwner } from '@ember/application';
-import { isPresent } from '@ember/utils';
+import { isBlank, isPresent } from '@ember/utils';
 
-// todo re-enable
 // import fetch from 'fetch';
-import { Promise, denodeify } from 'rsvp';
+import { Promise, denodeify, resolve } from 'rsvp';
+
+const SHOEBOX_STORE_NAME = 'hyde-files';
 
 export default Service.extend({
   fastboot: computed(function() {
@@ -19,13 +20,35 @@ export default Service.extend({
     host = this.get('defaultHost'),
     namespace = this.get('defaultNamespace')
   } = {}) {
-    let url = [host, namespace, filename]
-      .compact()
-      .join('/');
+    let shoebox = this.get('fastboot.shoebox');
+    let shoeboxStore = shoebox && shoebox.retrieve(SHOEBOX_STORE_NAME);
+    let file = shoeboxStore && shoeboxStore[filename];
 
-    return this.get('fastboot.isFastBoot') ?
-      readFile(url) :
-      readFetched(url);
+    if (isPresent(file)) {
+      return resolve(file);
+    } else {
+      let url = [host, namespace, filename]
+        .compact()
+        .map((value) => value.endsWith('/') ? value.slice(0, -1) : value)
+        .join('/');
+
+      if (!this.get('fastboot.isFastBoot')) {
+        return readFetched(url);
+      }
+
+      return readFile(url).then((content) => {
+        if (isPresent(shoebox)) {
+          if (isBlank(shoeboxStore)) {
+            shoeboxStore = {};
+            shoebox.put(SHOEBOX_STORE_NAME, shoeboxStore);
+          }
+
+          shoeboxStore[filename] = content;
+        }
+
+        return content;
+      });
+    }
   }
 });
 

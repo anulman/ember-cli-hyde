@@ -15,7 +15,6 @@ export default Model.extend({
   parent: belongsTo('hyde/collection'),
   tags: hasMany('hyde/collection'),
 
-  // todo: shoebox
   markdown: computed('id', function() {
     let promise = this.get('hyde').fetchFile(`${this.get('id')}.md`);
 
