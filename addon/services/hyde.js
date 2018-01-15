@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 import { getOwner } from '@ember/application';
 import { isBlank, isPresent } from '@ember/utils';
 
-// import fetch from 'fetch';
+import fetch from 'fetch';
 import { Promise, denodeify, resolve } from 'rsvp';
 
 const SHOEBOX_STORE_NAME = 'hyde-files';

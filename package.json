@@ -58,7 +58,6 @@
     "configPath": "tests/dummy/config",
     "before": "prember",
     "fastbootDependencies": [
-      "ember-fetch",
       "fs"
     ]
   }
