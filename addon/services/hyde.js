@@ -13,8 +13,23 @@ export default Service.extend({
     return getOwner(this).lookup('service:fastboot');
   }),
 
-  defaultHost: fastbootRoot,
-  defaultNamespace: 'hyde',
+  defaultHost: computed(function() {
+    if (this.get('fastboot.isFastBoot')) {
+      return this.get('fastboot.request.headers.headers.x-broccoli.outputPath');
+    } else {
+      let config = getOwner(this).resolveRegistration('config:environment');
+      let hydeConfig = config && config.hyde || {};
+
+      return hydeConfig.host || config.rootURL;
+    }
+  }),
+
+  defaultNamespace: computed(function() {
+    let config = getOwner(this).resolveRegistration('config:environment');
+    let hydeConfig = config && config.hyde || {};
+
+    return hydeConfig.namespace || 'hyde';
+  }),
 
   fetchFile(filename, {
     host = this.get('defaultHost'),
@@ -51,10 +66,6 @@ export default Service.extend({
     }
   }
 });
-
-export function fastbootRoot() {
-  return this.get('fastboot.request.headers.headers.x-broccoli.outputPath');
-}
 
 function readFile(url) {
   const fs = FastBoot.require('fs');
