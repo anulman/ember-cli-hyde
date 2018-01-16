@@ -1,5 +1,5 @@
-{{#if item.markdown.isFulfilled}}
-  {{markdown-to-html item.markdown.content tagName='article' extensions='highlight'}}
+{{#if markdown.isFulfilled}}
+  {{markdown-to-html markdown.content tagName='article' extensions='highlight'}}
 {{else}}
   i am placeholder
 {{/if}}
