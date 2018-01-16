@@ -1,5 +1,4 @@
 import JSONAPIAdapter from 'ember-data/adapters/json-api';
-import CachedShoe from 'ember-cached-shoe';
 
 import { reads } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
@@ -7,9 +6,7 @@ import { isBlank, isPresent } from '@ember/utils';
 
 import { denodeify, resolve } from 'rsvp';
 
-export default JSONAPIAdapter.extend(...[
-  CachedShoe
-], {
+export default JSONAPIAdapter.extend({
   hyde: service(),
 
   host: reads('hyde.defaultHost'),
