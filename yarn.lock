@@ -1095,13 +1095,15 @@ broccoli-funnel@^2.0.0, broccoli-funnel@^2.0.1:
     symlink-or-copy "^1.0.0"
     walk-sync "^0.3.1"
 
-broccoli-hyde-compiler@~0.0.1:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/broccoli-hyde-compiler/-/broccoli-hyde-compiler-0.0.3.tgz#f4b2c410ec35416f7b0dd141d8c5451227c71b01"
+broccoli-hyde-compiler@~0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/broccoli-hyde-compiler/-/broccoli-hyde-compiler-0.0.4.tgz#e1290bca75b8c048a900997b40b9990a025e70f4"
   dependencies:
     broccoli-caching-writer "^3.0.3"
     fs-extra "^5.0.0"
-    mr-hyde "~0.0.1"
+    js-yaml "^3.11.0"
+    lodash "^4.17.5"
+    mr-hyde "~0.0.3"
 
 broccoli-kitchen-sink-helpers@^0.2.5, broccoli-kitchen-sink-helpers@^0.2.6, broccoli-kitchen-sink-helpers@~0.2.0:
   version "0.2.9"
@@ -3455,6 +3457,13 @@ js-yaml@^3.10.0, js-yaml@^3.2.5, js-yaml@^3.2.7, js-yaml@^3.6.1, js-yaml@^3.9.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+js-yaml@^3.11.0:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.11.0.tgz#597c1a8bd57152f26d622ce4117851a51f5ebaef"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
+
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -3977,6 +3986,10 @@ lodash@^4.14.0, lodash@^4.16.3, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
+lodash@^4.17.5:
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
+
 log-symbols@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-1.0.2.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
@@ -4211,9 +4224,9 @@ mout@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mout/-/mout-1.1.0.tgz#0b29d41e6a80fa9e2d4a5be9d602e1d9d02177f6"
 
-mr-hyde@~0.0.1:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/mr-hyde/-/mr-hyde-0.0.2.tgz#c34b3d4e6c15475c4fbf455628ce52aec390dc7d"
+mr-hyde@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/mr-hyde/-/mr-hyde-0.0.3.tgz#a9323255eb9335deff981b042d4e3fe9c88837e5"
   dependencies:
     fs-extra "^5.0.0"
     js-yaml "^3.10.0"

@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "broccoli-funnel": "^2.0.1",
-    "broccoli-hyde-compiler": "~0.0.1",
+    "broccoli-hyde-compiler": "~0.0.4",
     "broccoli-merge-trees": "^2.0.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.3",
