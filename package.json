@@ -24,10 +24,7 @@
     "broccoli-hyde-compiler": "~0.1.1",
     "broccoli-merge-trees": "^2.0.0",
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-htmlbars": "^2.0.3",
-    "ember-cli-showdown": "~4.1.1",
-    "ember-fetch": "~3.4.4",
-    "ember-highlightjs-shim": "github:anulman/ember-highlightjs-shim"
+    "ember-cli-htmlbars": "^2.0.3"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -56,9 +53,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "before": "prember",
-    "fastbootDependencies": [
-      "fs"
-    ]
+    "before": "prember"
   }
 }
